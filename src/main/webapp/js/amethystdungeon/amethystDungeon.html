@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="social.css">
+    <title>Amethyst Dungeon</title>
+    <script type="text/javascript" src="./js/seguranca.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/monsters.js"></script>
+    <script type="text/javascript" src="js/hud.js"></script>
+    <div id="scripts">
+        <script type="text/javascript" id="monstro1" src="praia/carangueijo.js"></script>
+        <script type="text/javascript" id="monstro2" src="praia/cogumelo.js"></script>
+        <script type="text/javascript" id="mapa" src="praia/beach.js"></script>
+        <script type="text/javascript" id="main" src="praia/beachMain.js"></script>
+    </div>
+    <div id="healthbarBorda">
+        <span id="vidaPlayer"></span>
+        <div id="healthbar"></div>
+    </div>
+    <div id="infoInimigo">
+        <img src="img/semItem.png" class="fotoInimigo" alt="foto do inimigo">
+        <span id="nomeInimigo"></span>
+        <div id="healthbarBordaBixo">
+            <span id="vidaInimigo"></span>
+            <div id="healthbarBixo"></div>
+        </div>
+    </div>
+    <div id="exeperienceBarBorda">
+        <div id="experienceBar"></div>
+    </div>
+    <p id="levelUp">0/20</p>
+    <p id="personagemUp"></p>
+    <div id="mochilaBorda">
+        <div id="mochila">
+            <img alt="item" src="Item/item28.png" id="item1" class="item">
+            <img alt="item" src="Item/item28.png" id="item2" class="item">
+            <img alt="item" src="Item/item29.png" id="item3" class="item">
+            <img alt="item" src="img/semItem.png" id="item4" class="item">
+            <img alt="item" src="img/semItem.png" id="item5" class="item">
+            <img alt="item" src="img/semItem.png" id="item6" class="item">
+            <img alt="item" src="img/semItem.png" id="item7" class="item">
+            <img alt="item" src="img/semItem.png" id="item8" class="item">
+            <img alt="item" src="img/semItem.png" id="item9" class="item">
+            <img alt="item" src="img/semItem.png" id="item10" class="item">
+            <img alt="item" src="img/semItem.png" id="item11" class="item">
+            <img alt="item" src="img/semItem.png" id="item12" class="item">
+            <img alt="item" src="img/semItem.png" id="item13" class="item">
+            <img alt="item" src="img/semItem.png" id="item14" class="item">
+            <img alt="item" src="img/semItem.png" id="item15" class="item">
+            <img alt="item" src="img/semItem.png" id="item16" class="item">
+            <img alt="item" src="img/semItem.png" id="item17" class="item">
+            <img alt="item" src="img/semItem.png" id="item18" class="item">
+            <img alt="item" src="img/semItem.png" id="item19" class="item">
+            <img alt="item" src="img/semItem.png" id="item20" class="item">
+            <img alt="item" src="img/semItem.png" id="item21" class="item">
+            <img alt="item" src="img/semItem.png" id="item22" class="item">
+            <img alt="item" src="img/semItem.png" id="item23" class="item">
+            <img alt="item" src="img/semItem.png" id="item24" class="item">
+        </div>
+    </div>
+    <div id="equipamentosBorda">
+        <div id="equipamentos">
+            <!-- Elmo -->
+            <img alt="item" src="img/semItem.png" id="equipamento1" class="equipamento">
+            <!-- Peitoral -->
+            <img alt="item" src="img/semItem.png" id="equipamento2" class="equipamento">
+            <!-- Luvas -->
+            <img alt="item" src="img/semItem.png" id="equipamento3" class="equipamento">
+            <!-- Botas -->
+            <img alt="item" src="img/semItem.png" id="equipamento4" class="equipamento">
+            <!-- Espadas -->
+            <img alt="item" src="img/semItem.png" id="equipamento5" class="equipamento">
+            <!-- Escudo -->
+            <img alt="item" src="img/semItem.png" id="equipamento6" class="equipamento">
+        </div>
+    </div>
+
+    <div id="habilidadesBorda">
+        <div id="habilidades">
+            <div class="pontos">Nivel de Força:
+                <span id="pontosForca">0</span>
+                <button onclick="adicionarForca()" class="uparForca upar">+</button>
+            </div>
+            <br>
+            <div class="pontos">Nível de Defesa:
+                <span id="pontosDefesa">0</span>
+                <button onclick="adicionarDefesa()" class="uparDefesa upar">+</button>
+            </div>
+            <br>
+            <div class="pontos">Nível de Vitalidade:
+                <span id="pontosVitalidade">0</span>
+                <button onclick="adicionarVitalidade()" class="uparVida upar">+</button>
+            </div>
+            <div class="pontos pontosHabi">Pontos Habilidade
+                <br><br>
+                <br><br>
+                <p id="pontosHabilidade">0</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="statusBorda">
+        <div id="stats">
+            <div class="pontosStatus">Forca
+                <br><br>
+                <span id="pontosForcaAtual">0</span>
+            </div>
+            <br>
+            <div class="pontosStatus">Defesa
+                <br><br>
+                <span id="pontosDefesaAtual">0</span>
+            </div>
+            <br>
+            <div class="pontosStatus">Vitalidade
+                <br><br>
+                <span id="pontosVitalidadeAtual">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="mapFrame">
+        <div id="miniPlayer"></div>
+        <div id="mapFrameMonsters"></div>
+        <img src="praia/mapBeach.png" alt="mini map" id="miniMap">
+    </div>
+    <div id="scoreFrame">Score:
+        <span id="score"></span>
+    </div>
+    <div id="mensagem">
+        <p class="mensagem">GAME OVER</p>
+    </div>
+    <div id="hud">
+        <div class="icons">
+            <button type="submit" value="" class="btn" id="backpack">
+                <img src="img/backpack.png" alt="mochila" class="tamanhoImgs">
+            </button>
+        </div>
+        <div class="icons" id="armor">
+            <button type="submit" value="" class="btn">
+                <img src="img/armor.png" alt="armadura" class="tamanhoImgs" id="aaaa">
+            </button>
+        </div>
+        <div class="icons" id="status">
+            <button type="submit" value="" class="btn">
+                <img src="img/status.png" alt="status" class="tamanhoImgs">
+            </button>
+        </div>
+        <div class="icons" id="statistics">
+            <button type="submit" value="" class="btn">
+                <img src="img/statistics.png" alt="statisticas" class="tamanhoImgs">
+            </button>
+        </div>
+    </div>
+    <div id="itemOptions">
+        <ul class="menu-options" id="itemOptionsList">
+            <li class="menu-option" onclick="equipar()">Equipar</li>
+            <li class="menu-option" onclick="dropar()">Dropar</li>
+        </ul>
+    </div>
+    <div id="equipamentsOptions">
+        <ul class="menu-options" id="equipamentsOptionsList">
+            <li class="menu-option" onclick="desequipar()">Desequipar</li>
+            <li class="menu-option" onclick="droparEquipamento()">Dropar</li>
+        </ul>
+    </div>
+    <div class="statusItens">
+        <span id="statusItens"></span>
+    </div>
+    <div id="aviso">
+    </div>
+    <i id="pausar" class="fas fa-pause-circle pause"></i>
+    <i id="restart" class="fas fa-redo-alt restart"></i>
+    <i id="sair" class="fas fa-power-off"></i>
+    <div id="reload"></div>
+    <div id="share">
+        <!-- Sharingbutton Facebook -->
+        <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2F35.239.206.173%2Fdungeon"
+            target="_blank" aria-label="Share on Facebook">
+            <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large">
+                <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" /></svg>
+                </div>Share on Facebook
+            </div>
+        </a>
+
+        <!-- Sharingbutton Twitter -->
+        <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Compartilhe%20seu%20score%20com%20seus%20amigos!!&amp;url=http%3A%2F%2F35.239.206.173%2Fdungeon"
+            target="_blank" aria-label="Share on Twitter">
+            <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large">
+                <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" /></svg>
+                </div>Share on Twitter
+            </div>
+        </a>
+    </div>
+    <div id="fim">
+        <span id="msgFim1">Fim Do Jogo</span>
+        <br>
+        <span id="msgFim2">Obrigado Por Jogar</span>
+
+        <i id="rest" class="fas fa-redo-alt restart"></i>
+        <i id="exit" class="fas fa-power-off"></i>
+        <!-- Sharingbutton Facebook -->
+        <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2F35.239.206.173%2Fdungeon"
+            target="_blank" aria-label="Share on Facebook">
+            <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large">
+                <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" /></svg>
+                </div>Share on Facebook
+            </div>
+        </a>
+
+        <!-- Sharingbutton Twitter -->
+        <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Compartilhe%20seu%20score%20com%20seus%20amigos!!&amp;url=http%3A%2F%2F35.239.206.173%2Fdungeon"
+            target="_blank" aria-label="Share on Twitter">
+            <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large">
+                <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" /></svg>
+                </div>Share on Twitter
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>

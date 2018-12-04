@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/cadastrar.js"></script>
+    <script type="text/javascript" src="js/addMenu.js"></script>
+</head>
+<header>
+    <nav id="navBar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-purple">
+        <a class="navbar-brand" href="/dungeon/index.html">Amethyst Dungeon</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dungeon/js/amethystdungeon/amethystDungeon.html">Jogar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dungeon/tutorial.html">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dungeon/alterarDados.html">Alterar Dados</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body id="fundoListas">
+<div id="container-fluid">
+    <section id="fundo" class="col-md-3 order-md-1 bg-text-light">
+        <div id="error" class="alert alert-danger" role="alert" style="display: none">
+            <span id="msgErro"></span>
+        </div>
+        <br>
+        <br>
+        <form id="form" class="needs-validation border rounded text-dark shadow p-3 mb-5 bg-white rounded">
+            <p class="format">Cadastre-se em Amethyst Dungeon</p>
+            <div class="mb-3">
+                <p>Nome</p>
+                <input type="text" class="form-control" id="name" placeholder="Insira seu nome">
+            </div>
+            <div class="mb-3">
+                <p>Email</p>
+                <input type="email" class="form-control" id="email" placeholder="Insira seu email">
+            </div>
+            <div class="mb-3">
+                <p>Nascimento</p>
+                <input type="date" class="form-control" id="datebirth" placeholder="Insira sua data de nascimento">
+            </div>
+            <div class="mb-3">
+                <p>Usuário</p>
+                <input type="text" class="form-control" id="login" placeholder="Insira seu usuário">
+            </div>
+            <div class="mb-3">
+                <p>Senha</p>
+                <input type="password" class="form-control" id="password" placeholder="Insira sua senha">
+            </div>
+
+            <hr class="mb-4 bg-light">
+            <button class="btn bg-purple botao2 text-light" type="submit" id="cadastrar">Cadastrar</button>
+            <br>
+            <br>
+        </form>
+    </section>
+</div>
+<footer class="page-footer font-small blue bg-purple rodape">
+    <div class="footer-copyright text-center py-3 text-white">© 2018 Copyright: Amethyst Dungeon
+    </div>
+</footer>
+</body>
+
+</html>

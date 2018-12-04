@@ -1,0 +1,192 @@
+#fundo {
+    margin-left: 37%;
+    margin-top: 6%;
+}
+#editarInformacoes {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#form {
+    padding: 10px;
+}
+.desce {
+    margin-top: 10px;
+}
+.format {
+    text-align: center;
+}
+.botao {
+    margin-left: 38%;
+}
+.lado {
+    margin-left: 42px;
+}
+.botao2 {
+    margin-left: 33%;
+}
+.fundo {
+    position: absolute;
+    margin-top: -25px;
+    width: 1349px;
+    height: 800px;
+}
+.bg-purple {
+    background-color: #563d7c;
+}
+.purple-color {
+    color: #563d7c;
+}
+.alinhar {
+    margin-left: 40px;
+}
+.table-purple{
+    background-color: #563d7c;
+}
+.table-purple-light{
+    background-color: #563d6c;
+}
+.listaUsuarios {
+    text-align: center;
+}
+.rodape {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.absolute {
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    width: 500px;
+    height: 200px;
+}
+.tamanho {
+    width: 50px;
+    height: 50px;
+    margin-left: 130px;
+}
+.centro {
+    text-align: center;
+}
+.infos {
+    margin-left: 47px;
+    background-color: white;
+}
+
+.infosMenu {
+    margin-left: 80px;
+    margin-top: 80px;
+    background-color: white;
+}
+a.nounderline:link 
+{
+    color: purple;
+    text-decoration:none;
+} 
+a:visited {
+    color: purple;
+    text-decoration:none;
+}
+#tutorial {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 43%;
+    margin-right: 30%;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+#menu {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 55px;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+.icones {
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.comandos {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 565px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bordas {
+    border: solid black;
+    border-radius: 500px;
+}
+.e {
+    width: 50px;
+    height: 50px;
+    color: black;
+    border: solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+.s {
+    width: 50px;
+    height: 50px;
+    color: black;
+    border: solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 31px;
+}
+.f {
+    width: 50px;
+    height: 50px;
+    color: white;
+    border: solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 31px;
+}
+.flecha {
+    font-size: 50px;
+    margin-left: 20px;
+    margin-top: 250px;
+}
+b{
+    color: white;
+}
+.mouse{
+    color: white;
+}
+
+#fundoIndex {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#logoIndex {
+    position: absolute;
+    top: calc(50% - 91.5px);
+    left: calc(50% - 198px)
+}
+
+#fundoMenu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#fundoTutorial {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#fundoListas {
+    background-color: lightgray;
+}
+#fundoAttDados {
+    margin-left: 37%;
+    margin-top: 1%;
+}

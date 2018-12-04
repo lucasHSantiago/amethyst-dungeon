@@ -1,0 +1,575 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: kdr;
+    src: url(KRDeclaration.ttf);
+}
+
+#vidaPlayer {
+    position: absolute;
+    right: 35%;
+    bottom: -4px;
+    color: white;
+    font-family: 'Skranji', cursive;
+}
+
+#healthbarBorda {
+    width: 150px;
+    height: 15px;
+    background-color: red;
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 75px);
+    border: solid black;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#healthbar {
+    width: 150px;
+    height: 15px;
+    background-color: green;
+}
+
+#exeperienceBarBorda {
+    width: 150px;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 75px);
+    border: solid transparent;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#experienceBar {
+    width: 150px;
+    height: 15px;
+    background-color: blue;
+    margin-bottom: 5px;
+}
+
+#manaBar {
+    width: 150px;
+    height: 15px;
+    background-color: purple;
+    position: absolute;
+}
+
+#mapFrame {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    bottom: 72%;
+    left: 84%;
+    border: 3px solid black;
+}
+
+#miniMap {
+    width: 140px;
+    height: 140px;
+    background-size: cover;
+}
+
+#miniPlayer {
+    width: 5px;
+    height: 5px;
+    background-color: darkblue;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#mensagem {
+    width: 400px;
+    height: 250px;
+    left: 10px;
+    top: calc(50% - 125px);
+    left: calc(50% - 200px);
+    position: absolute;
+    background-color: purple;
+    border: 2px solid black;
+    border-radius: 5px;
+    opacity: 0.5;
+    display: none;
+}
+
+.mensagem {
+    margin-top: 90px;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    font-family: 'Skranji', cursive;
+}
+
+#levelUp {
+    font-family: 'Skranji', cursive;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 49.5%;
+    font-size: 12px;
+}
+
+#personagemUp {
+    font-family: 'Skranji', cursive;
+    color: purple;
+    position: absolute;
+    bottom: 53px;
+    left: 50%;
+    font-size: 25px;
+}
+
+#mochilaBorda {
+    width: 257px;
+    height: 350px;
+    position: absolute;
+    bottom: 12%;
+    left: 75%;
+    border: 5px solid lightgrey;
+    border-radius: 3px;
+    opacity: 0.8;
+    display: none;
+}
+
+#mochila {
+    width: 257px;
+    height: 350px;
+    background-color: grey;
+    position: absolute;
+}
+
+#equipamentosBorda {
+    width: 257px;
+    height: 350px;
+    position: absolute;
+    bottom: 12%;
+    left: 75%;
+    border: 5px solid lightgrey;
+    border-radius: 3px;
+    opacity: 0.8;
+    display: none;
+}
+
+#equipamentos {
+    width: 257px;
+    height: 350px;
+    background-color: grey;
+    position: absolute;
+}
+
+#habilidadesBorda {
+    width: 257px;
+    height: 350px;
+    position: absolute;
+    bottom: 12%;
+    left: 75%;
+    border: 5px solid lightgrey;
+    border-radius: 3px;
+    opacity: 0.8;
+    display: none;
+}
+
+#habilidades {
+    width: 257px;
+    height: 350px;
+    background-color: grey;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.icons {
+    width: 64.5px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: white;
+}
+
+#hud {
+    position: absolute;
+    top: 88%;
+    left: 75%;
+    padding: 0;
+    margin: 0;
+}
+
+.formatMochila {
+    position: absolute;
+    left: 20%;
+    top: 0.1%
+}
+
+#armor {
+    position: absolute;
+    left: 100%;
+    top: 0.1%
+}
+
+#status {
+    position: absolute;
+    left: 200%;
+    top: 0.1%
+}
+
+#statistics {
+    position: absolute;
+    left: 300%;
+    top: 0.1%
+
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.tamanhoImgs {
+    position: absolute;
+    top: calc(50% - 24px);
+    right: calc(50% - 24px);
+}
+
+#itemOptions {
+    width: 80px;
+    height: 90px;
+    box-shadow: 1px 0px 1px 1px black;
+    position: absolute;
+    display: none;
+    background-color: lightgray;
+}
+
+#equipamentsOptions {
+    width: 80px;
+    height: 90px;
+    box-shadow: 1px 0px 1px 1px black;
+    position: absolute;
+    display: none;
+    background-color: lightgray;
+}
+
+.menu-options {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.menu-option {
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.item {
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    margin-left: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.statusItens {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Skranji', cursive;
+    width: 150px;
+    height: 40px;
+    background-color: grey;
+    border: 5px solid lightgrey;
+    position: absolute;
+    bottom: 59%;
+    left: 63%;
+}
+
+#statusItens {
+    position: absolute;
+    top: 21%;
+    right: 34%;
+    display: none;
+}
+
+#statusBorda {
+    width: 257px;
+    height: 350px;
+    position: absolute;
+    bottom: 12%;
+    left: 75%;
+    border: 5px solid lightgrey;
+    border-radius: 3px;
+    opacity: 0.8;
+    display: none;
+}
+
+#stats {
+    width: 257px;
+    height: 350px;
+    background-color: grey;
+    position: absolute;
+}
+
+.equipamento {
+    position: absolute;
+    border: solid 2px gray;
+    width: 50px;
+    height: 50px;
+}
+
+#equipamento1 {
+    margin-left: 39%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#equipamento2 {
+    margin-left: 39%;
+    margin-top: 115px;
+    margin-bottom: 50px;
+}
+
+#equipamento6 {
+    margin-left: 70%;
+    margin-top: 115px;
+    margin-bottom: 50px;
+}
+
+#equipamento5 {
+    margin-left: 8%;
+    margin-top: 115px;
+    margin-bottom: 100px;
+}
+
+#equipamento4 {
+    margin-left: 53%;
+    margin-top: 190px;
+    margin-bottom: 100px;
+}
+
+#equipamento3 {
+    margin-left: 25%;
+    margin-top: 190px;
+    margin-bottom: 50px;
+}
+
+.pontos {
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+}
+
+.upar {
+    width: 25%;
+    border-radius: 5px;
+}
+
+.uparForca {
+    background-color: blue;
+    color: white;
+    position: absolute;
+    left: 70%;
+}
+
+.uparDefesa {
+    background-color: green;
+    color: white;
+    position: absolute;
+    left: 70%;
+
+}
+
+.uparVida {
+    background-color: red;
+    color: white;
+    position: absolute;
+    left: 70%;
+
+}
+
+.pontosHabi {
+    top: 60%;
+    left: 26.5%;
+    position: absolute;
+    text-align: center;
+}
+
+#pontosHabilidade {
+    position: absolute;
+    top: 10%;
+    left: 43%;
+    font-size: 35px;
+}
+
+.pontosStatus {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#infoInimigo {
+    width: 170px;
+    height: 70px;
+    font-family: 'Skranji', cursive;
+    position: absolute;
+    left: calc(50% - 85px);
+    top: 2%;
+    background-color: gray;
+    border: solid lightgray;
+    border-radius: 3px;
+    display: none;
+}
+
+#nomeInimigo {
+    position: absolute;
+    left: 60px;
+    bottom: 30px;
+    color: white;
+}
+
+.fotoInimigo {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 15px;
+    bottom: 30px;
+}
+
+#vidaInimigo {
+    position: absolute;
+    right: 40%;
+    bottom: -4px;
+    color: white;
+}
+
+#healthbarBordaBixo {
+    width: 150px;
+    height: 15px;
+    background-color: red;
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 78px);
+    border: solid black;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#healthbarBixo {
+    width: 150px;
+    height: 15px;
+    background-color: green;
+}
+
+#pausar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 35px;
+}
+
+#restart {
+    position: absolute;
+    left: 12px;
+    top: 50px;
+    font-size: 30px;
+}
+
+#sair {
+    position: absolute;
+    left: 12px;
+    top: 88px;
+    font-size: 30px;
+}
+
+#aviso {
+    position: absolute;
+    font-family: 'Skranji', cursive;
+    border: 2px solid black;
+    background-color: gray;
+    top: 2%;
+    left: 5%;
+    font-size: 30px;
+}
+
+#reload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+}
+
+#scoreFrame {
+    font-family: 'Skranji', cursive;
+    font-size: 20px;
+    position: absolute;
+    bottom: 68%;
+    left: 84%;
+}
+
+#fim {
+    display: none;
+    font-family: 'Skranji', cursive;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    text-align: center;
+}
+
+#msgFim1 {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+#msgFim2 {
+    position: absolute;
+    top: 40%;
+    left: 33%;
+}
+
+#rest {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+}
+
+#exit {
+    position: absolute;
+    top: 70%;
+    left: 55%;
+}
+
+#share {
+    display: none;
+    position: absolute;
+    top: 75%;
+    left: 36%;
+}
+
+.posSocial {
+    position: absolute;
+    top: 90%;
+    font-size: 15px;
+}
+
+.facebook {
+    position: absolute;
+    left: 30%;
+}
+
+.twitter {
+    position: absolute;
+    left: 55%;
+}
